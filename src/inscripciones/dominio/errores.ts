@@ -1,9 +1,4 @@
-export class ErrorDeDominio extends Error {
-  constructor(mensaje: string) {
-    super(mensaje);
-    this.name = this.constructor.name;
-  }
-}
+export abstract class ErrorDeDominio extends Error {}
 
 export class HorarioNoEncontradoError extends ErrorDeDominio {
   constructor(horarioId: number) {

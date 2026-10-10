@@ -68,3 +68,14 @@ model Inscripcion {
   @@map("inscripciones")
 
 }
+
+model Usuario {
+  id            Int      @id @default(autoincrement())
+  correo        String   @unique @db.VarChar(160)
+  passwordHash  String   @db.VarChar(72)
+  rol           String   @default("miembro") @db.VarChar(20)
+  miembroId     Int?
+  creadoEn      DateTime @default(now())
+
+  @@map("usuarios")
+}

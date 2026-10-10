@@ -187,3 +187,13 @@ POST {{host}}/miembros
 Content-Type: application/json
 
 { "nombre": "Omar Cota", "correo": "omar@gmail.com", "membresia": "plus" }
+
+
+### F. Origen permitido
+GET {{host}}/clases
+Origin: http://localhost:5173
+
+
+### G. Origen no permitido
+GET {{host}}/clases
+Origin: https://otro-sitio.com
